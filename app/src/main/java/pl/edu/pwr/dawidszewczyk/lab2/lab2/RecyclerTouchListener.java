@@ -10,12 +10,12 @@ import android.view.View;
  * Created by Dawid on 2017-04-09.
  */
 
-public static class RecyclerTouchListener implements RecyclerView.OnItemTouchListener {
+public class RecyclerTouchListener implements RecyclerView.OnItemTouchListener {
 
     private GestureDetector gestureDetector;
-    private MainActivity.ClickListener clickListener;
+    private ClickListener clickListener;
 
-    public RecyclerTouchListener(Context context, final RecyclerView recyclerView, final MainActivity.ClickListener clickListener) {
+    public RecyclerTouchListener(Context context, final RecyclerView recyclerView, final ClickListener clickListener) {
         this.clickListener = clickListener;
         gestureDetector = new GestureDetector(context, new GestureDetector.SimpleOnGestureListener() {
             @Override
